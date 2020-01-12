@@ -28,7 +28,5 @@ class Patient
       appointments.doctors
     end
   end
-  
-  
-  
+
 end
