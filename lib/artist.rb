@@ -14,6 +14,10 @@ class Artist
     @@all
   end
   
+  def self.songs
+    @@all.each{|song| song.artist == self }
+  end
+  
   
   
   
