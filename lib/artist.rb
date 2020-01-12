@@ -15,10 +15,20 @@ class Artist
   end
   
   def self.songs
-    @@all.each{|song| song.artist == self }
+    Song.all.select do |songs|
+      songs.artist == self
+    end
   end
   
+  def new_song(name, genre)
+    Song.new(name, self, genre)
+  end
   
+  def genres
+    songs.select do |song|
+      song.genre
+    end
+  end
   
   
 end
